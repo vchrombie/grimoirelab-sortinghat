@@ -1,0 +1,23 @@
+[flake8]
+exclude = 
+    .git
+    .eggs
+    __pycache__
+    build
+    dist
+    docs
+    docker
+    migrations
+    .venv
+    ; excluding below file as it keeps failing 
+    ; because it is generated automatically
+    sortinghat/cli/client/schema.py 
+ignore = 
+    E129
+    E402
+    F841
+    ; ignoring these below errors as it is difficult 
+    ; to understand the logic if we format the file
+    W504 E128 sortinghat/core/schema.py
+max-line-length = 130
+
