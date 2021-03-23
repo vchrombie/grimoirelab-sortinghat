@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - muggle
+      - clean-repo
   pull_request:
     branches:
       - muggle
