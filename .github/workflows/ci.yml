@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - muggle
+      - muggle-coverage
   pull_request:
     branches:
       - muggle
@@ -40,6 +41,7 @@ jobs:
       run: |
         source $HOME/.poetry/env
         poetry install -vvv
+        poetry add -D coverage
     - name: Set MySQL mode
       env:
         DB_HOST: 127.0.0.1
@@ -53,7 +55,8 @@ jobs:
     - name: Tests
       run: |
         source $HOME/.poetry/env
-        poetry run python manage.py test --settings=config.settings.testing
+        poetry run coverage run --source=sortinghat manage.py test --settings=config.settings.testing
+        poetry run coverage report -m
 
   frontend:
 
