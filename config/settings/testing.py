@@ -16,6 +16,8 @@ SILENCED_SYSTEM_CHECKS = ["django_mysql.E016"]
 
 SECRET_KEY = 'fake-key'
 
+ALLOWED_HOSTS = []
+
 INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -36,7 +38,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': '',
         'NAME': 'sortinghat_db',
         'OPTIONS': {
             'charset': 'utf8mb4',
