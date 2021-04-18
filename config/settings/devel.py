@@ -124,8 +124,7 @@ if os.environ.get('GITHUB_WORKFLOW'):
             'PASSWORD': '',
             'NAME': 'sortinghat_db',
             'OPTIONS': {
-                'charset': 'utf8mb4',
-                'sql_mode': ','.join(SQL_MODE)
+                'charset': 'utf8mb4'
             },
             'TEST': {
                 'NAME': 'testhat',
