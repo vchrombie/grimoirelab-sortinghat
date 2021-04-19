@@ -113,28 +113,10 @@ DATABASES = {
             'CHARSET': 'utf8mb4',
             'COLLATION': 'utf8mb4_unicode_520_ci',
         },
+        'HOST': '127.0.0.1',
+        'PORT': 3306
     }
 }
-
-if os.environ.get('GITHUB_WORKFLOW'):
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'USER': 'root',
-            'PASSWORD': '',
-            'NAME': 'sortinghat_db',
-            'OPTIONS': {
-                'charset': 'utf8mb4'
-            },
-            'TEST': {
-                'NAME': 'testhat',
-                'CHARSET': 'utf8mb4',
-                'COLLATION': 'utf8mb4_unicode_520_ci',
-            },
-            'HOST': '127.0.0.1',
-            'PORT': 3306
-        }
-    }
 
 # FIXTURE_DIRS = "sortinghat/core/fixtures/"
 
