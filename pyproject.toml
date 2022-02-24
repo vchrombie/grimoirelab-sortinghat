@@ -66,6 +66,7 @@ urllib3 = "^1.22"
 [tool.poetry.dev-dependencies]
 httpretty = "0.9.7"
 flake8 = "^3.9.0"
+coverage = "^5.5"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
